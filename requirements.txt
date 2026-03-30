@@ -1,0 +1,29 @@
+# UET MCP-RAG System – compatible with Python 3.12
+
+# ── Web framework ──────────────────────────────────────────────────────────────
+fastapi
+uvicorn[standard]
+pydantic
+
+# ── LangChain + integrations ───────────────────────────────────────────────────
+langchain
+langchain-community
+langchain-core
+langchain-text-splitters
+langchain-ollama
+
+# ── Vector DB ──────────────────────────────────────────────────────────────────
+chromadb
+
+# ── Ollama (local LLM / embeddings) ───────────────────────────────────────────
+ollama
+
+# ── PDF processing ─────────────────────────────────────────────────────────────
+pypdf
+
+# ── Frontend ───────────────────────────────────────────────────────────────────
+streamlit
+requests
+
+# ── Utilities ──────────────────────────────────────────────────────────────────
+python-dotenv
