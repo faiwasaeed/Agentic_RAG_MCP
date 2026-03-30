@@ -1,32 +1,11 @@
 # 🎓 UET MCP-RAG System v3.0
 
-> **Best of both worlds**: Accurate answers (from `UET_RAG_System`) + Fast MCP-based agent architecture (from `AI_Agent_MCP`)
+>
 
 ![Python](https://img.shields.io/badge/Python-3.12+-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.115-red)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.40-orange)
 ![MCP](https://img.shields.io/badge/Architecture-MCP%20Agent-purple)
-
----
-
-## 🧠 Why This Project Exists
-
-| Problem | AI_Agent_MCP | UET_RAG_System | **This Project** |
-|---|---|---|---|
-| Response time | ⚡ Fast (~1s) | 🐢 Slow (40–80s) | ⚡ Fast (3–8s) |
-| Answer accuracy | ❌ Hardcoded / low | ✅ High (RAG) | ✅ High (RAG) |
-| Architecture | ✅ MCP agent | ❌ Monolithic | ✅ MCP agent |
-| Query expansion | ❌ No | ✅ Yes | ✅ Yes |
-| Reranking | ❌ No | ✅ Yes | ✅ Yes |
-| Scope guardrail | ✅ Yes | ✅ Yes | ✅ Yes |
-
-### Root Cause Analysis
-
-**AI_Agent_MCP is fast but inaccurate** because it uses a hardcoded knowledge base instead of real vector retrieval from the PDF.
-
-**UET_RAG_System is accurate but slow** because it loads the embedding model + Chroma DB + LLM on every request (no pre-loading).
-
-**This project fixes both**: resources are loaded once at startup (fast), and the full RAG pipeline (query expansion + MMR + reranking + LLM grounding) runs on every query (accurate).
 
 ---
 
@@ -229,10 +208,3 @@ Score: 95.5%
 | Reranking | <50ms |
 | LLM generation | 2–6 seconds |
 
----
-
-## 🙏 Acknowledgements
-
-- **AI_Agent_MCP** by salihamubeen – MCP architecture inspiration
-- **UET_RAG_System** by faiwasaeed – Accurate RAG pipeline inspiration
-- LangChain, ChromaDB, Ollama, FastAPI, Streamlit
